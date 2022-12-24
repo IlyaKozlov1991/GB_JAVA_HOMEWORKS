@@ -11,9 +11,9 @@ public class Lesson003_Exercise001 {
             int a = random.nextInt(100);
             list1.add(a);
         }
-        System.out.println(list1);
+        System.out.println("Initial list: " + list1);
         list1 = check_even(list1);
-        System.out.println(list1);
+        System.out.println("List with even numbers removed: " + list1);
     }
     private static ArrayList<Integer> check_even(ArrayList<Integer> list){
         ArrayList<Integer> int_list = new ArrayList<Integer>(); // Create new internal list

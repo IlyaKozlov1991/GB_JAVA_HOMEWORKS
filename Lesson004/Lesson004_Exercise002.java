@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Lesson001_Exercise002 {
+public class Lesson004_Exercise002 {
     public static void main(String[] args) throws IOException {
         LinkedList<String> text_list = new LinkedList<String>();
         /* text_list.add("first");

@@ -13,21 +13,15 @@ public class PhoneBook {
         LinkedList<String> new_write = new LinkedList<String>();
         name = surname;
         number = phoneNumber;
-            if (!storage.containsKey(name)){
-                // System.out.println("YES");
-                // LinkedList<String> new_write = new LinkedList<String>();
-                new_write.add(number);
-                storage.put(name, new_write);
+            if (!storage.containsKey(name)){ // Check if key (name) is not present in Map
+                new_write.add(number); // Add number to list
+                storage.put(name, new_write); // Add value (list with number) to key (name)
             }
             else{
-                new_write.addAll(storage.get(name));
-                new_write.add(number);
-                storage.put(name, new_write);
-                // System.out.println("NO");
+                new_write.addAll(storage.get(name)); // If key (name) is present in Map read value from the key and add it to list
+                new_write.add(number); // Add new number to the list
+                storage.put(name, new_write); // Add value (list with numbers) to key (name)
             }
-        // new_write.add(number);
-        // storage.putIfAbsent(name, new_write);
-        // System.out.println(storage);
     }
     public List<String> getBySurname(String surname) {
         System.out.println("Numbers related to '" + surname + "': ");
